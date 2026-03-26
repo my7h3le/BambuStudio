@@ -24,6 +24,15 @@ jobs:
       ver_pure:
 
     steps:
+      - name: DEBUG VERSIONS USED
+        run: |
+          brew --version
+          echo "BREW CONFIG"
+          brew config
+          echo "XCODE VERSION"
+          xcodebuild -version
+          echo "BREW VERSIONS"
+          brew list --versions
       - name: Checkout
         uses: actions/checkout@v6
         with:
